@@ -1,0 +1,53 @@
+--Comandos NoSQL
+
+--Criação de banco e acesso
+
+use NomeDoBanco
+
+--Inclusão de tabelas 
+
+--"Entre na banco"
+
+--Comando de inclusão
+
+db.coluna.insert({id: 1, nome: 'Paulo'})
+
+*/db = chamada do banco
+Coluna = nome da tabela
+insert = comando de inclusão 
+({id: 1, nome: 'Paulo'}) = inclusão das colunas com o primeiro dado
+/*
+
+--Para consulta de dados da tabela
+
+db.coluna.find()
+
+--ou
+
+--Com linha especifica
+db.coluna.find({id: 1})
+
+--Comando para remoção de dados
+
+db.coluna.remove({id: 1})
+
+--Comando para a alteração de dados
+
+-- variavel = (nome da variavel)
+var variavel = db.coluna.findOne({id: 1})
+ 
+--Consultando a variavel criado 
+variavel
+--incluindo valor na variavel 
+--.nome = conteudo da variavel "coluna" que vai alterar exemplo nome = Paulo, nessa situação após o ponto incluremos o objeto nome que possui o valor Paulo
+variavel.nome = 'novo valor'
+ 
+--visualizando o conteudo incluso 
+variavel 
+ 
+--Comando para a alteração do dado
+db.coluna.update({id: 1}, variavel)
+ 
+Visualização da alteração
+db.coluna.findOne({id: 1})
+
